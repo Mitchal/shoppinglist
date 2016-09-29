@@ -1,0 +1,58 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Att handla</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <main>
+      <form>
+        <input type="text" maxlength="100" class="input--add" />
+      </form>
+      <section class="items">
+        <ul id="items">
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAmKlpEWTdxA21rLt7StrLX1B_a62b7o_k",
+        authDomain: "shopping-list-2f511.firebaseapp.com",
+        databaseURL: "https://shopping-list-2f511.firebaseio.com",
+        storageBucket: "shopping-list-2f511.appspot.com",
+        messagingSenderId: "557883618923"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/auth.js"></script>
+    <script src="/db.js"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
